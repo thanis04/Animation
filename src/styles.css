@@ -1,0 +1,154 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.main-outer{
+    width: 100vm;
+    height: 100vh;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+ /*   overflow-y: hidden;*/
+}
+.horizon-wrap{
+    width: 100%;
+    height: 275px;
+    border: 1px solid white;
+
+}
+.mountain{
+    width: 620px;
+    position: absolute;
+}
+.m3{
+    right: -95px;
+    z-index: -1;
+}
+.m2{
+    left: 510px;
+    width: 700px;
+   top: -35px;
+    z-index: 1;
+}
+.m1{
+    z-index: -2;
+}
+.cloud{
+    width: 200px;
+    position: absolute;
+    right: 0;
+}
+.c1{
+    /*animation-name: cloudMove;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;*/
+    animation: cloudMove 30s linear infinite;
+}
+.c2{
+    /*animation-name: cloudMove;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;*/
+    animation: cloudMove 25s linear infinite;
+    z-index: 2;
+}
+.c3{
+    /*animation-name: cloudMove;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-delay: 3s;
+    animation-timing-function: linear;*/
+    animation: cloudMove 20s linear 3s infinite;
+    z-index: -2;
+}
+@keyframes cloudMove {
+    from{
+        right: -200px;
+    }
+    to{
+        right: 1600px;
+    }
+}
+.bird{
+    width: 100px;
+    top: 100px;
+    position: absolute;
+    /*animation-name: birdMove;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;*/
+
+    animation: birdMove 25s linear infinite;
+}
+@keyframes birdMove {
+    from {
+        left: -200px;
+    }
+    to {
+        left: 1000px;
+    }
+}
+.road-outer{
+    width: 100%;
+    height: 250px;
+    background-color: #2c3e50;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: -1;
+}
+.vehicle-one{
+    position: absolute;
+    width: 150px;
+    top: 3px;
+    animation: carMove 10s linear 2s infinite;
+}
+@keyframes carMove {
+    from{
+        left: -200px;
+    }
+    to{
+        left: 1600px;
+    }
+}
+.vehicle-two{
+    position: absolute;
+    width: 150px;
+    animation: bicycleMove 20s linear 2s infinite;
+}
+@keyframes bicycleMove {
+    from{
+        right: -200px;
+    }
+    to{
+        right: 1600px;
+    }
+}
+.line{
+    width: 100%;
+    border-top: 8px dashed white;
+}
+.tree-yard{
+    flex: 1;
+    border: 1px solid white;
+    position: relative;
+    background-color: antiquewhite;
+}
+.tree{
+    position: absolute;
+}
+.tree-1{
+    width: 450px;
+    top: -120px;
+}
+.tree-2{
+    width: 480px;
+    left: 600px;
+    top: -150px;
+}
+.tree-3{
+    width: 350px;
+    left: 1200px;
+    top: -270px;
+}
